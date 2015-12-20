@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     Launcher2 \
+    Launcher3 \
     libemoji
 
 # Common overlay
@@ -61,20 +62,13 @@ PRODUCT_COPY_FILES +=  \
 # APN list
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
- 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/addon.d/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/aosparadox/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # Boot Animantion
-ifneq ($(filter falcon titan,$(TARGET_DEVICE)),)
+ifeq ($(PRODUCT_BRAND),motorola)
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter bacon lux,$(PRODUCT_DEVICE)),)
+ifeq ($(PRODUCT_BRAND),oneplus)
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/bootanimation/AOSParadox_1080_bootanimation.zip:system/media/bootanimation.zip
 endif
