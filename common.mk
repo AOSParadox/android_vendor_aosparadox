@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The AOSParadox Project
+# Copyright (C) 2016 The AOSParadox Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,38 +40,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.layers.noIcon=noIcon
 
-# Packages
-PRODUCT_PACKAGES += \
-    Launcher2 \
-    Launcher3 \
-    libemoji
-
-# Common overlay
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/aosparadox/overlay/common
-
-# Enable SIP+VoIP on all targets
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# Media effects
-PRODUCT_COPY_FILES +=  \
-    vendor/aosparadox/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/aosparadox/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
-
-# APN list
-PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
-
 # Boot Animantion
-ifeq ($(PRODUCT_BRAND),motorola)
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
-endif
-ifeq ($(PRODUCT_BRAND),oneplus)
-PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/AOSParadox_1080_bootanimation.zip:system/media/bootanimation.zip
-endif
 
 # AOSParadox Version
 PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
