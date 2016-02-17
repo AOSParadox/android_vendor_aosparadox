@@ -41,15 +41,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.layers.noIcon=noIcon
 
 # CAF Branch
-ifeq ($(TARGET_BOARD_PLATFORM,msm8226)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8226)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BF.1.1.3-00810-8x26.0
 endif
-ifeq ($(TARGET_BOARD_PLATFORM,msm8974)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BF.1.1.3-00810-8x74.0
 endif
-ifeq ($(TARGET_BOARD_PLATFORM,msm8916)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8916)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BR.1.2.6-01010-8x16.0
 endif
