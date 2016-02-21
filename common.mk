@@ -61,3 +61,7 @@ PRODUCT_COPY_FILES += \
 # AOSParadox Version
 PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += ro.par.version =$(PAR_VERSION)
+
+# APN list
+PRODUCT_COPY_FILES += \
+    vendor/aosparadox/apns-conf.xml:system/etc/apns-conf.xml
