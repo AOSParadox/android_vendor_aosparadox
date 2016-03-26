@@ -40,20 +40,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.layers.noIcon=noIcon
 
-# CAF Branch
-ifeq ($(TARGET_BOARD_PLATFORM),msm8226)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.par.branch=LA.BF.1.1.3-01010-8x74.0
-endif
-ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.par.branch=LA.BF.1.1.3-01010-8x74.0
-endif
-ifeq ($(TARGET_BOARD_PLATFORM),msm8916)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.par.branch=LA.BR.1.2.6-01310-8x16.0
-endif
-
 # Boot Animantion
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
