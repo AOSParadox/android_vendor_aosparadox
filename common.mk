@@ -42,7 +42,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot Animantion
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/720p_PNG_bootanimation.zip:system/media/bootanimation.zip
+    vendor/aosparadox/bootanimation/720p_PNG_bootanimation.zip:system/media/720p_PNG_bootanimation.zip \
+    vendor/aosparadox/bootanimation/1080p_PNG_bootanimation.zip:system/media/1080p_PNG_bootanimation.zip \
+    vendor/aosparadox/releasetools/bootanimation.sh:install/bin/bootanimation.sh
+
+TARGET_RELEASETOOLS_EXTENSIONS := vendor/aosparadox/releasetools
 
 # AOSParadox Version
 PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
