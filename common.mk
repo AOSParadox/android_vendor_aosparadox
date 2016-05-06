@@ -42,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot Animantion
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
+    vendor/aosparadox/bootanimation/720p_PNG_bootanimation.zip:system/media/bootanimation.zip
 
 # AOSParadox Version
 PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
