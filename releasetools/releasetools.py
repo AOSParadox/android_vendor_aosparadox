@@ -15,6 +15,7 @@
 #
 
 def FullOTA_InstallEnd(info):
+    info.script.Unmount("/system");
     info.script.Mount("/system");
     info.script.AppendExtra('assert(run_program("/tmp/install/bin/bootanimation.sh") == 0);');
     info.script.Unmount("/system");
