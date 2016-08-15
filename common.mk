@@ -47,13 +47,3 @@ PRODUCT_PROPERTY_OVERRIDES += ro.par.version =$(PAR_VERSION)
 # APN list
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/apns-conf.xml:system/etc/apns-conf.xml
-
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_blueprints
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_crystal
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_dark_side
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_edge
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_neutral_network
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_paradox_army
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_pattern
-DEVICE_PACKAGE_OVERLAYS += vendor/aosparadox/overlay/the_principles
