@@ -38,7 +38,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.use_intro_anim=false \
     ro.ril.enable.amr.wideband=1 \
     drm.service.enabled=true \
-    ro.layers.noIcon=noIcon
+    ro.layers.noIcon=noIcon \
+    ro.par.branch=$(shell grep "<default revision=" .repo/manifest.xml | awk -F'"' '{print $$2}' | awk  -F "/" '{print $$3}') \
+
 
 # AOSParadox Version
 PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
